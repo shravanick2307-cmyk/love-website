@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Love Quiz — For You</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="page-bg">
+  <nav class="nav">
+    <a href="index.html" class="logo">💌 Me → You</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="story.html">Our Story</a>
+      <a href="admin.html">(Secret) View Answers</a>
+    </div>
+  </nav>
+
+  <main class="center-col content">
+    <h2 class="title">A Little Quiz — tell me about you (and us)</h2>
+    <p class="lead">Answer these playful MCQs and add a tiny note — I can't wait to read it 💬</p>
+
+    <form id="love-form" class="card form-card">
+      <label>
+        Your name:
+        <input type="text" id="name" placeholder="Your nickname..." required />
+      </label>
+
+      <fieldset>
+        <legend>1) What meal would you pick to eat together tonight?</legend>
+        <label><input type="radio" name="q1" value="Home-cooked surprise" required> Home-cooked surprise</label>
+        <label><input type="radio" name="q1" value="Pizza & movies"> Pizza & movies</label>
+        <label><input type="radio" name="q1" value="Cafe dessert crawl"> Cafe dessert crawl</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>2) Best date vibe?</legend>
+        <label><input type="radio" name="q2" value="Cozy indoor" required> Cozy indoor</label>
+        <label><input type="radio" name="q2" value="Adventure outdoors"> Adventure outdoors</label>
+        <label><input type="radio" name="q2" value="Surprise event"> Surprise event</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>3) Which superpower should I have for you?</legend>
+        <label><input type="radio" name="q3" value="Infinite patience" required> Infinite patience</label>
+        <label><input type="radio" name="q3" value="Cook like a chef"> Cook like a chef</label>
+        <label><input type="radio" name="q3" value="Master of surprises"> Master of surprises</label>
+      </fieldset>
+
+      <label>
+        Write a short message to me (I will treasure it):
+        <textarea id="note" rows="4" placeholder="A tiny message..." required></textarea>
+      </label>
+
+      <div class="row">
+        <button class="btn" type="submit">Send my answers 💘</button>
+        <button class="btn outline" type="reset">Reset</button>
+      </div>
+
+      <div id="status" class="small-note" aria-live="polite"></div>
+    </form>
+    <p class="tiny-note">Technical note: your answers are saved privately so I can read them in the secret admin page.</p>
+  </main>
+
+  <!-- Firebase SDK (will be used in assets/app.js). Insert your config in app.js as instructed. -->
+  <script src="assets/app.js"></script>
+</body>
+</html>
